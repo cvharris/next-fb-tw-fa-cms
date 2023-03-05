@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/sharp-regular-svg-icons';
 
 export default function Home() {
   return (
@@ -13,7 +15,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <div className=""></div>
+      <div className="">
+        <FontAwesomeIcon icon={faEnvelope} />
+      </div>
     </>
   );
 }
