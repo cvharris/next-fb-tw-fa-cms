@@ -3,8 +3,6 @@ import '@/styles/globals.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
-import { Inter } from '@next/font/google';
-const inter = Inter({ subsets: ['latin'] });
 
 import { initializeApp } from 'firebase/app';
 const firebaseConfig = {
@@ -18,11 +16,6 @@ initializeApp(firebaseConfig);
 export default function App({ Component, pageProps }) {
   return (
     <AuthUserProvider>
-      <style jsx global>{`
-        html {
-          font-family: ${inter.style.fontFamily};
-        }
-      `}</style>
       <Component {...pageProps} />
     </AuthUserProvider>
   );
